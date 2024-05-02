@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Young Serif", Outfit;
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+:root {
+    --font-heading: "Young Serif", sans-serif;
+    --font-body: Outfit, sans-serif;
+    --color-nutmeg: hsl(14, 45%, 36%);
+    --color-dark-raspberry: hsl(332, 51%, 32%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-rose-white: hsl(330, 100%, 98%);
+    --color-eggshell: hsl(30, 54%, 90%);
+    --color-light-grey: hsl(30, 18%, 87%);
+    --color-wenge-brown: hsl(30, 10%, 34%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-eggshell);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    overflow-wrap: break-word;
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 36rem;
+    background-color: var(--color-white);
+}
+
+img {
+    border-radius: 0.5rem;
+}
+
+h2 {
+    color: var(--color-nutmeg);
+}
+
+li {
+    padding-block: 0.5rem;
+    color: var(--color-wenge-brown);
+}
+
+li::marker {
+    color: var(--color-nutmeg);
+}
+
+.prepration {
+    padding: 1rem;
+    background-color: var(--color-rose-white);
+}
+
+.prepration h3 {
+    color: var(--color-dark-raspberry);
+}
+
+.prepration li::marker {
+    color: var(--color-dark-raspberry);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-color: inherit;
+}
+
+td {
+    padding: 0.5rem 2rem;
+}
+
+td:nth-of-type(even) {
+    font-weight: bold;
+    color: var(--color-nutmeg);
+}
+
+tbody>*+* {
+    border-top: 2px solid gray;
+    border-bottom: 0px solid inherit;
+}
+
+@media (min-width: 576px) {
+    .container {
+        margin: 4rem auto;
+        border-radius: 1rem;
+    }
+}
